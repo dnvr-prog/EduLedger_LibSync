@@ -1,0 +1,453 @@
+/* ==========================================
+   EDULEDGER: LIBSYNC
+   ADMIN - ADD BOOK PAGE
+========================================== */
+
+.add-book-page {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 28px 30px 40px;
+    background: var(--background, #f7f3ef);
+    min-height: calc(100vh - 80px);
+}
+
+.add-book-page * {
+    box-sizing: border-box;
+}
+
+.add-book-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--primary, #7d0000);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.heading-title-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    border-radius: 13px;
+    background: var(--primary-soft, #f8e8e5);
+    font-size: 25px;
+}
+
+.heading-title-row h1 {
+    margin: 0 0 7px;
+    color: var(--text, #333333);
+    font-size: 27px;
+    font-weight: 750;
+}
+
+.heading-title-row p {
+    margin: 0;
+    color: var(--muted, #777777);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.heading-label {
+    padding: 8px 12px;
+    border: 1px solid var(--border, #eadfd7);
+    border-radius: 20px;
+    background: var(--surface, #ffffff);
+    color: var(--primary, #7d0000);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+/* FEEDBACK */
+
+.form-alert {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 14px 17px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.form-alert.success {
+    color: #176b32;
+    background: #e8f6ec;
+    border-color: #c7e8d0;
+}
+
+.form-alert.error {
+    color: #a51d1d;
+    background: #fdebea;
+    border-color: #f5cdca;
+}
+
+.alert-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: currentColor;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* CONTENT LAYOUT */
+
+.add-book-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    align-items: start;
+    gap: 22px;
+}
+
+.add-book-card,
+.add-book-tip {
+    min-width: 0;
+    border: 1px solid var(--border, #eadfd7);
+    border-radius: 14px;
+    background: var(--surface, #ffffff);
+}
+
+.add-book-card {
+    overflow: hidden;
+}
+
+.form-card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 23px 25px;
+    border-bottom: 1px solid var(--border, #eadfd7);
+}
+
+.form-card-heading h2 {
+    margin: 0 0 6px;
+    color: var(--text, #333333);
+    font-size: 17px;
+}
+
+.form-card-heading p {
+    margin: 0;
+    color: var(--muted, #777777);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.required-note {
+    color: var(--muted, #777777);
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+/* FORM */
+
+.add-book-form {
+    padding: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 9px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--text, #333333);
+    font-size: 12px;
+    font-weight: 750;
+}
+
+.form-group label span {
+    color: var(--primary, #7d0000);
+}
+
+.form-group input {
+    width: 100%;
+    min-width: 0;
+    min-height: 45px;
+    padding: 12px 14px;
+    border: 1px solid var(--border, #eadfd7);
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: var(--text, #333333);
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #a39a94;
+}
+
+.form-group input:focus {
+    border-color: var(--primary, #7d0000);
+    box-shadow: 0 0 0 3px rgba(125, 0, 0, 0.09);
+}
+
+.form-group small {
+    color: var(--muted, #777777);
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.form-divider {
+    height: 1px;
+    margin: 28px 0 22px;
+    background: var(--border, #eadfd7);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+}
+
+.cancel-btn,
+.save-book-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 43px;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 750;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.cancel-btn {
+    border: 1px solid var(--border, #eadfd7);
+    background: #ffffff;
+    color: var(--text, #333333);
+}
+
+.cancel-btn:hover {
+    background: var(--surface-soft, #fffaf5);
+}
+
+.save-book-btn {
+    border: 1px solid var(--primary, #7d0000);
+    background: var(--primary, #7d0000);
+    color: #ffffff;
+}
+
+.save-book-btn:hover {
+    border-color: var(--primary-light, #a52a2a);
+    background: var(--primary-light, #a52a2a);
+}
+
+.save-book-btn:focus-visible,
+.cancel-btn:focus-visible,
+.back-link:focus-visible {
+    outline: 3px solid rgba(125, 0, 0, 0.25);
+    outline-offset: 3px;
+}
+
+/* SIDE TIP */
+
+.add-book-tip {
+    padding: 23px 20px;
+}
+
+.tip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 17px;
+    border-radius: 11px;
+    background: var(--primary-soft, #f8e8e5);
+    color: var(--primary, #7d0000);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.add-book-tip h3 {
+    margin: 0 0 10px;
+    color: var(--text, #333333);
+    font-size: 15px;
+}
+
+.add-book-tip > p {
+    margin: 0;
+    color: var(--muted, #777777);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.add-book-tip ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px 0;
+    margin: 18px 0 0;
+    border-top: 1px solid var(--border, #eadfd7);
+    list-style: none;
+}
+
+.add-book-tip li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: var(--text, #333333);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.add-book-tip li span {
+    color: var(--primary, #7d0000);
+    font-weight: 800;
+}
+
+.tip-footer {
+    padding-top: 17px;
+    border-top: 1px solid var(--border, #eadfd7);
+    color: var(--primary, #7d0000);
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.tip-footer span {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted, #777777);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .add-book-layout {
+        grid-template-columns: minmax(0, 1fr) 220px;
+        gap: 16px;
+    }
+
+    .add-book-page {
+        padding: 24px 20px 32px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+    .add-book-layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .add-book-tip {
+        display: none;
+    }
+
+    .add-book-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .heading-label {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-book-page {
+        padding: 20px 13px 28px;
+    }
+
+    .heading-title-row {
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+    .heading-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 21px;
+    }
+
+    .heading-title-row h1 {
+        font-size: 22px;
+    }
+
+    .heading-title-row p {
+        font-size: 12px;
+    }
+
+    .form-card-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 19px;
+    }
+
+    .add-book-form {
+        padding: 19px;
+    }
+
+    .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 19px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .cancel-btn,
+    .save-book-btn {
+        width: 100%;
+        min-height: 46px;
+    }
+}

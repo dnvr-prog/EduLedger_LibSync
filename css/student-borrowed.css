@@ -1,0 +1,337 @@
+/* ==================================
+   MY BORROWING HISTORY
+   EduLedger: LibSync
+================================== */
+
+.borrowing-content {
+    min-width: 0;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.page-eyebrow {
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.page-heading h1 {
+    margin: 7px 0;
+    color: var(--text);
+    font-size: 29px;
+    font-weight: 750;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.browse-books-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 17px;
+    border-radius: 9px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.browse-books-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+.borrowing-summary {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 23px;
+    margin-bottom: 25px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.summary-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 55px;
+    height: 55px;
+    border-radius: 13px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 27px;
+}
+
+.summary-details > span {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.summary-details > strong {
+    display: block;
+    margin: 4px 0;
+    color: var(--text);
+    font-size: 27px;
+}
+
+.summary-details p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.summary-details p b {
+    color: var(--primary);
+}
+
+.borrowing-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.borrowing-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.borrowing-card-header h2 {
+    margin: 0 0 6px;
+    color: var(--text);
+    font-size: 17px;
+}
+
+.borrowing-card-header p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.record-count {
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.borrowing-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.borrowing-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 12px;
+}
+
+.borrowing-table th {
+    padding: 15px 17px;
+    background: var(--surface-soft);
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.borrowing-table td {
+    padding: 17px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.borrowing-table tbody tr:hover {
+    background: var(--surface-soft);
+}
+
+.book-id {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.book-title {
+    min-width: 150px;
+    max-width: 260px;
+    font-weight: 650;
+    white-space: normal;
+    line-height: 1.5;
+}
+
+.not-returned {
+    color: var(--warning);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.status-borrowed {
+    background: #fff1d6;
+    color: #9a5b00;
+}
+
+.status-returned {
+    background: #e2f5e8;
+    color: #218044;
+}
+
+.status-overdue {
+    background: #fde8e7;
+    color: #b42318;
+}
+
+.status-default {
+    background: #eeeeee;
+    color: #555555;
+}
+
+.empty-state {
+    padding: 45px 20px;
+    text-align: center;
+    white-space: normal;
+}
+
+.empty-icon {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 35px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+    font-size: 17px;
+}
+
+.empty-state p {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.empty-state a {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.borrowing-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 22px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.borrowing-card-footer a {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.borrowing-card-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .page-heading h1 {
+        font-size: 25px;
+    }
+
+    .borrowing-table th,
+    .borrowing-table td {
+        padding: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-heading h1 {
+        font-size: 23px;
+    }
+
+    .browse-books-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .borrowing-summary {
+        padding: 18px;
+    }
+
+    .borrowing-card-header {
+        align-items: flex-start;
+        padding: 18px;
+    }
+
+    .borrowing-table th,
+    .borrowing-table td {
+        padding: 13px;
+    }
+
+    .borrowing-card-footer {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 18px;
+    }
+}

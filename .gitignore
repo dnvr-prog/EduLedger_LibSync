@@ -1,0 +1,25 @@
+# Local configuration and secrets
+/config.php
+/includes/email_config.php
+/test.php
+/test_email.php
+
+# Environment variables
+.env
+.env.*
+
+# Local database exports and backups
+*.sql
+*.sql.zip
+*.bak
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Composer dependencies
+/vendor/

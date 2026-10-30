@@ -1,0 +1,331 @@
+
+/* =========================
+   RETURN RECORDS
+========================= */
+
+.page-content {
+    padding: 30px;
+    background: #f7f3ef;
+    min-height: calc(100vh - 90px);
+}
+
+
+/* PAGE HEADER */
+
+.page-header {
+    margin-bottom: 24px;
+}
+
+.page-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.page-title-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #f5e1dc;
+    color: #8b0000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.page-title h1 {
+    font-size: 25px;
+    color: #333;
+
+    margin-bottom: 5px;
+}
+
+.page-title p {
+    font-size: 13px;
+    color: #777;
+}
+
+
+/* MESSAGE */
+
+.form-message {
+    max-width: 1100px;
+
+    padding: 12px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 8px;
+
+    background: #e8f6ee;
+
+    color: #218653;
+
+    border: 1px solid #ccebd9;
+
+    font-size: 13px;
+}
+
+
+/* RETURN CARD */
+
+.return-card {
+    background: #fff;
+
+    border: 1px solid #eadfd7;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,.04);
+}
+
+
+/* CARD HEADER */
+
+.return-card-header {
+    padding: 22px 24px;
+
+    border-bottom: 1px solid #eadfd7;
+}
+
+.return-card-header h2 {
+    font-size: 18px;
+
+    color: #7d0000;
+
+    margin-bottom: 5px;
+}
+
+.return-card-header p {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* TABLE */
+
+.return-table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+.return-table {
+    width: 100%;
+
+    min-width: 1050px;
+
+    border-collapse: collapse;
+}
+
+
+/* TABLE HEADER */
+
+.return-table thead {
+    background: #fff8f5;
+}
+
+.return-table th {
+    padding: 15px 18px;
+
+    text-align: left;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #666;
+
+    border-bottom: 1px solid #eadfd7;
+
+    white-space: nowrap;
+}
+
+
+/* TABLE BODY */
+
+.return-table td {
+    padding: 16px 18px;
+
+    font-size: 13px;
+
+    color: #444;
+
+    border-bottom: 1px solid #f0e8e3;
+
+    white-space: nowrap;
+}
+
+.return-table tbody tr {
+    transition: .2s ease;
+}
+
+.return-table tbody tr:hover {
+    background: #fffaf8;
+}
+
+.return-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* STUDENT */
+
+.student-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.student-avatar {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    border-radius: 50%;
+
+    background: #f5e1dc;
+
+    color: #8b0000;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+/* BOOK */
+
+.book-title {
+    font-weight: 600;
+
+    color: #444;
+}
+
+
+/* STATUS */
+
+.borrowed-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #fff3df;
+
+    color: #b56b00;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* RETURN BUTTON */
+
+.return-btn {
+    height: 34px;
+
+    padding: 0 13px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #8b0000;
+
+    color: #fff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .2s ease;
+}
+
+.return-btn:hover {
+    background: #6f0000;
+
+    box-shadow: 0 4px 10px rgba(139,0,0,.18);
+
+    transform: translateY(-1px);
+}
+
+
+/* FOOTER */
+
+.page-footer {
+    margin-top: 20px;
+}
+
+.page-footer a {
+    color: #8b0000;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .page-content {
+        padding: 24px 20px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-content {
+        padding: 20px 15px;
+    }
+
+    .page-title-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+    .page-title h1 {
+        font-size: 21px;
+    }
+
+    .page-title p {
+        font-size: 12px;
+    }
+
+    .return-card-header {
+        padding: 18px;
+    }
+
+}

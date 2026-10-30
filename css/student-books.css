@@ -1,0 +1,456 @@
+/* =========================================
+   EduLedger: LibSync
+   Student Library Books Styles
+========================================= */
+
+.books-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    min-width: 0;
+}
+
+.page-eyebrow {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.books-page-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.books-page-heading h1 {
+    margin-bottom: 9px;
+    color: var(--text);
+    font-size: 28px;
+    line-height: 1.25;
+}
+
+.books-page-heading p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* SEARCH AND FILTER CARD */
+
+.books-filter-card {
+    padding: 22px;
+    margin-bottom: 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(70, 40, 25, 0.04);
+}
+
+.books-filter-form {
+    display: grid;
+    grid-template-columns: minmax(200px, 2fr)
+                           minmax(150px, 1fr)
+                           minmax(150px, 1fr);
+    gap: 18px;
+    align-items: end;
+}
+
+.books-search-field,
+.books-filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    min-width: 0;
+}
+
+.books-search-field label,
+.books-filter-field label {
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.books-search-field input,
+.books-filter-field select {
+    width: 100%;
+    min-width: 0;
+    height: 45px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--text);
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.books-search-field input::placeholder {
+    color: #a29a95;
+}
+
+.books-search-field input:focus,
+.books-filter-field select:focus {
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.books-filter-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 2px;
+}
+
+.books-search-button,
+.books-reset-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.books-search-button {
+    border: 1px solid var(--primary);
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.books-search-button:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.books-reset-button {
+    border: 1px solid var(--border);
+    background: #ffffff;
+    color: var(--text);
+}
+
+.books-reset-button:hover {
+    background: var(--surface-soft);
+    border-color: var(--primary-light);
+}
+
+/* RESULTS HEADER */
+
+.books-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.books-results-header h2 {
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 19px;
+}
+
+.books-results-header p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* TABLE CARD */
+
+.books-table-card {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(70, 40, 25, 0.04);
+}
+
+.books-table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.books-table thead {
+    background: var(--surface-soft);
+}
+
+.books-table th {
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--border);
+    color: #75645b;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    white-space: nowrap;
+}
+
+.books-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #f1eae5;
+    color: #655c57;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.books-table tbody tr {
+    transition: background 0.15s ease;
+}
+
+.books-table tbody tr:hover {
+    background: #fffaf7;
+}
+
+.books-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.books-table .book-id {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.books-table .book-title {
+    min-width: 160px;
+    color: var(--text);
+    font-weight: 700;
+}
+
+/* CATEGORY LABEL */
+
+.book-category {
+    display: inline-block;
+    max-width: 180px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface-soft);
+    color: #75645b;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+/* STATUS BADGES */
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.status-available {
+    background: #e7f6eb;
+    color: #218038;
+}
+
+.status-available .status-dot {
+    background: #218838;
+}
+
+.status-borrowed {
+    background: #fbe8e7;
+    color: #b42323;
+}
+
+.status-borrowed .status-dot {
+    background: #c62828;
+}
+
+.status-unknown {
+    background: #f1f1f1;
+    color: #555555;
+}
+
+/* EMPTY SEARCH RESULTS */
+
+.books-table .books-empty-state {
+    padding: 55px 20px;
+    text-align: center;
+    white-space: normal;
+}
+
+.empty-icon {
+    margin-bottom: 12px;
+    color: var(--primary-light);
+    font-size: 35px;
+}
+
+.books-empty-state strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.books-empty-state p {
+    margin-bottom: 15px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.books-empty-state a {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.books-empty-state a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.books-page-footer {
+    margin-top: 22px;
+    padding-bottom: 5px;
+    color: var(--muted);
+    font-size: 11px;
+    text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .books-filter-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .books-search-field {
+        grid-column: 1 / -1;
+    }
+
+    .books-filter-actions {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .dashboard-content {
+        padding: 20px 14px 28px;
+    }
+
+    .top-header {
+        gap: 12px;
+        padding: 13px 15px;
+    }
+
+    .university-brand {
+        gap: 9px;
+    }
+
+    .university-brand img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .university-brand h2 {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .university-brand p {
+        font-size: 10px;
+    }
+
+    .admin-header-profile {
+        gap: 7px;
+    }
+
+    .admin-avatar {
+        width: 34px;
+        height: 34px;
+    }
+
+    .admin-info strong {
+        max-width: 95px;
+        overflow-wrap: anywhere;
+        font-size: 11px;
+    }
+
+    .admin-info span {
+        font-size: 10px;
+    }
+
+    .books-page-heading {
+        margin-bottom: 20px;
+    }
+
+    .books-page-heading h1 {
+        font-size: 24px;
+    }
+
+    .books-page-heading p {
+        font-size: 13px;
+    }
+
+    .books-filter-card {
+        padding: 16px;
+        margin-bottom: 23px;
+    }
+
+    .books-filter-form {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
+    }
+
+    .books-search-field {
+        grid-column: auto;
+    }
+
+    .books-filter-actions {
+        grid-column: auto;
+        flex-wrap: wrap;
+    }
+
+    .books-search-button {
+        flex: 1;
+    }
+
+    .books-results-header h2 {
+        font-size: 17px;
+    }
+
+    .books-table {
+        min-width: 690px;
+    }
+
+    .books-table th,
+    .books-table td {
+        padding: 14px;
+    }
+}
